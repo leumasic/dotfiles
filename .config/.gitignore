@@ -1,0 +1,19 @@
+# Ignore everything by default.
+/*
+
+# Git stuff
+!.gitconfig
+!.gitignore
+
+# But not those files/folders
+!/fish
+!/nvim
+!/starship.toml
+!/gtk-3.0
+!/kitty
+!/hypr
+!/ranger
+!/environment.d
+
+# Lazygit
+!/lazygit

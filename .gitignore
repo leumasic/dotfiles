@@ -1,0 +1,20 @@
+# Ignore everything by default.
+/*
+
+# Git stuff
+!.gitconfig
+!.gitignore
+
+!.config
+!.vimrc
+
+!.fehbg
+
+!.themes
+
+!README.md
+
+!.vale.ini
+!styles
+
+!.wezterm.lua
