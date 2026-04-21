@@ -410,36 +410,36 @@ return {
   ),
 
   -- TODO: Add quick to-\mathbb matrix snippet
-  s(
-    {
-      trig = "([bBpvV])mat(%d+)x(%d+)([ar])",
-      trigEngine = "pattern",
-      wordTrig = false,
-      snippetType = "autosnippet",
-    },
-    fmta(
-      [[
-      \begin{<type>matrix}<>
-          <>
-      \end{<type>matrix}
-      ]],
-      {
-        type = f(function(_, snip)
-          return snip.captures[1] -- captures matrix type
-        end),
-
-        f(function(_, snip)
-          if snip.captures[4] == "a" then
-            local out = string.rep("c", tonumber(snip.captures[3]) - 1) -- array for augment
-            return "[" .. out .. "|c]"
-          end
-          return ""
-        end),
-        d(1, scaff.matrix),
-      }
-    ),
-    { condition = tex.in_mathzone }
-  ),
+  -- s(
+  --   {
+  --     trig = "([bBpvV])mat(%d+)x(%d+)([ar])",
+  --     trigEngine = "pattern",
+  --     wordTrig = false,
+  --     snippetType = "autosnippet",
+  --   },
+  --   fmta(
+  --     [[
+  --     \begin{<type>matrix}<>
+  --         <>
+  --     \end{<type>matrix}
+  --     ]],
+  --     {
+  --       type = f(function(_, snip)
+  --         return snip.captures[1] -- captures matrix type
+  --       end),
+  --
+  --       f(function(_, snip)
+  --         if snip.captures[4] == "a" then
+  --           local out = string.rep("c", tonumber(snip.captures[3]) - 1) -- array for augment
+  --           return "[" .. out .. "|c]"
+  --         end
+  --         return ""
+  --       end),
+  --       d(1, scaff.matrix),
+  --     }
+  --   ),
+  --   { condition = tex.in_mathzone }
+  -- ),
 
   s({ trig = "([^%w])(%u)%2", trigEngine = "pattern", wordTrig = false, snippetType = "autosnippet" }, {
     f(function(_, snip)
