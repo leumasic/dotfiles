@@ -103,7 +103,7 @@ return {
 
   -- Aggregators
   s(
-    { trig = "sm", snippetType = "autosnippet", dscr = "Summation" },
+    { trig = "sum", snippetType = "autosnippet", dscr = "Summation" },
     fmta("\\sum_{<>}^{<>} ", { i(1, "i=0"), i(2, "\\infty") }),
     { condition = tex.in_mathzone }
   ),
@@ -180,20 +180,6 @@ return {
     }),
     { condition = tex.in_mathzone }
   ),
-  -- s(
-  --   {
-  --     trig = "([%a%}])([ijk]) ",
-  --     trigEngine = "pattern",
-  --     wordTrig = false,
-  --     snippetType = "autosnippet",
-  --     dscr = "Subscript Basic Index",
-  --   },
-  --   fmta("<>_{<>}", {
-  --     l(l.CAPTURE1),
-  --     l(l.CAPTURE2),
-  --   }),
-  --   { condition = tex.in_mathzone }
-  -- ),
   s({
     trig = "([%w%)%]%}]):",
     trigEngine = "pattern",
@@ -385,6 +371,7 @@ return {
     }),
     { condition = tex.in_mathzone }
   ),
+  s({ trig = "aeq", snippetType = "autosnippet" }, t("&= "), { condition = tex.in_mathzone }),
   s(
     { trig = ";=", trigEngine = "pattern", wordTrig = false, snippetType = "autosnippet" },
     { t("\\defeq ") },
