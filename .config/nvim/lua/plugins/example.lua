@@ -134,6 +134,9 @@ return {
       -- ensure you have the `snippets` source (enabled by default)
       sources = {
         default = { "lsp", "path", "snippets", "buffer" },
+        per_filetype = {
+          markdown = {}, -- empty sources = no completions
+        },
       },
       completion = {
         trigger = {
