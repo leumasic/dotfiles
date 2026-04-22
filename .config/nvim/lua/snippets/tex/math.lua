@@ -372,6 +372,7 @@ return {
     { condition = tex.in_mathzone }
   ),
   s({ trig = "aeq", snippetType = "autosnippet" }, t("&= "), { condition = tex.in_mathzone }),
+  s({ trig = "nl", snippetType = "autosnippet" }, t({ "\\\\", "" }), { condition = tex.in_mathzone }),
   s(
     { trig = ";=", trigEngine = "pattern", wordTrig = false, snippetType = "autosnippet" },
     { t("\\defeq ") },
