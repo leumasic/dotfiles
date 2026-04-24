@@ -27,12 +27,6 @@ map("n", "<Down>", "<CMD>resize -2<CR>", { noremap = true, silent = true })
 map("i", "<C-f>", "<Right>", { noremap = true, silent = true })
 map("i", "<C-b>", "<Left>", { noremap = true, silent = true })
 
--- Luasnip Choice Node
-map("i", "<C-j>", "<Plug>luasnip-next-choice", { noremap = false })
-map("s", "<C-j>", "<Plug>luasnip-next-choice", { noremap = false })
-map("i", "<C-k>", "<Plug>luasnip-prev-choice", { noremap = false })
-map("s", "<C-k>", "<Plug>luasnip-prev-choice", { noremap = false })
-
 -- Add line mapping
 map(
   "n",
