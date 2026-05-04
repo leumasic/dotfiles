@@ -349,7 +349,7 @@ return {
   -- Calculus
   s({ trig = "to ", snippetType = "autosnippet", dscr = "to" }, { t("\\to ") }, { condition = tex.in_mathzone }),
   s(
-    { trig = "lm", snippetType = "autosnippet", dscr = "Limit" },
+    { trig = "lim", snippetType = "autosnippet", dscr = "Limit" },
     c(1, {
       fmta("\\lim_{<> \\to <>} ", { i(1, "n"), i(2, "\\infty") }),
       fmta("\\limsup_{<> \\to <>} ", { i(1, "n"), i(2, "\\infty") }),
