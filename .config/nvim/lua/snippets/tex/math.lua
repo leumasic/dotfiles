@@ -124,7 +124,7 @@ return {
     { condition = tex.in_mathzone }
   ),
   -- Symbols
-  s({ trig = "inf", snippetType = "autosnippet" }, { t("\\infty") }, { condition = tex.in_mathzone }),
+  s({ trig = "ooo", snippetType = "autosnippet" }, { t("\\infty") }, { condition = tex.in_mathzone }),
   s({ trig = "ns", snippetType = "autosnippet" }, { t("\\emptyset") }, { condition = tex.in_mathzone }),
   s({ trig = "s\\ ", snippetType = "autosnippet" }, { t("\\setminus ") }, { condition = tex.in_mathzone }),
 
@@ -289,8 +289,6 @@ return {
   -- Logic
   s({ trig = "fa", snippetType = "autosnippet", dscr = "∀" }, t("\\forall"), { condition = tex.in_mathzone }),
   s({ trig = "te", snippetType = "autosnippet", dscr = "∃" }, t("\\exists"), { condition = tex.in_mathzone }),
-  s({ trig = "ih", snippetType = "autosnippet", dscr = "∈" }, { t("\\in") }, { condition = tex.in_mathzone }),
-  s({ trig = "nih", snippetType = "autosnippet", dscr = "∉" }, { t("\\notin") }, { condition = tex.in_mathzone }),
   s({ trig = "iff", snippetType = "autosnippet", dscr = "<=>" }, { t("\\iff") }, { condition = tex.in_mathzone }),
   s({ trig = "mp", snippetType = "autosnippet", dscr = "=>" }, { t("\\implies") }, { condition = tex.in_mathzone }),
   s({ trig = "mpb", snippetType = "autosnippet", dscr = "<=" }, { t("\\impliedby") }, { condition = tex.in_mathzone }),
@@ -300,7 +298,7 @@ return {
 
   -- Set Theory
   s({ trig = "seq", snippetType = "autosnippet", dscr = "⊆" }, { t("\\subseteq") }, { condition = tex.in_mathzone }),
-  s({ trig = "ifm", snippetType = "autosnippet", dscr = "infimum" }, { t("\\inf") }, { condition = tex.in_mathzone }), -- Spelling to avoid conflict with "in"
+  s({ trig = "inf", snippetType = "autosnippet", dscr = "infimum" }, { t("\\inf") }, { condition = tex.in_mathzone }), -- Spelling to avoid conflict with "in"
   s({ trig = "sup", snippetType = "autosnippet", dscr = "supremum" }, { t("\\sup") }, { condition = tex.in_mathzone }),
   s(
     { trig = "ss", snippetType = "autosnippet", dscr = "Set Builder" },
